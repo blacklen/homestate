@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GitHub Homestead</title>
+  <meta name="description" content="Type a GitHub username. See their year as a doodled village — homes per repo, lit windows, street lamps of contributions." />
+  <meta property="og:title" content="GitHub Homestead" />
+  <meta property="og:description" content="Your GitHub year as a hand-drawn village: one home per repo, windows lit where the code is alive, street lamps glowing with each month's contributions." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <h1>GitHub Homestead</h1>
+      <p class="tagline">
+        Type a GitHub username. See their year as a neighborhood — one home per
+        repo, windows lit where the code is alive, and street lamps glowing
+        with each month's contributions.
+      </p>
+    </header>
+
+    <form id="search-form" class="search">
+      <input id="user-input" placeholder="github.com/username  or  username" aria-label="GitHub username" />
+      <button id="go-btn" type="submit">Move in</button>
+    </form>
+
+    <div id="examples" class="examples"></div>
+    <div id="error" class="error" hidden></div>
+
+    <section id="result" class="result" hidden>
+      <div class="result-head">
+        <h2 id="r-login"></h2>
+        <span id="r-name" class="note"></span>
+        <span id="r-stars" class="stars"></span>
+      </div>
+      <p id="r-bio" class="note" hidden></p>
+      <p id="r-story" class="story"></p>
+      <p id="r-calnote" class="note" hidden>
+        Couldn't read the contribution calendar — the street is unlit, but the homes still show.
+      </p>
+      <div class="layout">
+        <div id="scene"></div>
+        <div id="panel" class="panel"></div>
+      </div>
+    </section>
+
+    <footer class="foot">
+      Free · no login · public data only · runs entirely in your browser.
+      Calendar data via <a href="https://github.com/grubersjoe/github-contributions-api">github-contributions-api</a>.
+      Not affiliated with GitHub.
+    </footer>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
