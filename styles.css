@@ -78,27 +78,6 @@ body {
   cursor: default;
 }
 
-.examples {
-  color: var(--muted);
-  font-size: 14px;
-  margin-bottom: 24px;
-}
-
-.chip {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  color: var(--text);
-  border-radius: 999px;
-  padding: 5px 12px;
-  margin: 0 4px;
-  font-size: 13px;
-  cursor: pointer;
-}
-
-.chip:hover {
-  border-color: var(--accent);
-}
-
 .error {
   background: #2a1a1a;
   border: 1px solid #5b2b2b;

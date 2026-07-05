@@ -808,23 +808,6 @@ const input = $("user-input");
 const goBtn = $("go-btn");
 const errorBox = $("error");
 const resultSec = $("result");
-const examplesBox = $("examples");
-
-const EXAMPLES = ["blacklen", "sindresorhus", "gaearon"];
-
-examplesBox.appendChild(document.createTextNode("Try: "));
-for (const ex of EXAMPLES) {
-  const chip = document.createElement("button");
-  chip.className = "chip";
-  chip.type = "button";
-  chip.textContent = ex;
-  chip.addEventListener("click", () => {
-    input.value = ex;
-    run(ex);
-  });
-  examplesBox.appendChild(chip);
-}
-
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   run(input.value);
